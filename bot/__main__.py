@@ -43,7 +43,7 @@ def stats(update, context):
             f'<b>├  🎮 RAM : {memory}%</b>\n' \
             f'<b>├  💽 DISK : {disk}%</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>╰──「 🚸 @akalankanime 🚸 」</b>'
+            f'<b>╰──「 🚸 t.me/akalankanime 🚸 」</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
@@ -60,11 +60,11 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
     uptime = get_readable_time((time.time() - botStartTime))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         if update.message.chat.type == "private" :
-            sendMessage(f"Hey I'm Nimesh's Mirror Bot 🙂\nSince: <code>{uptime}</code>", context.bot, update)
+            sendMessage(f"ආ කට්ටිය මොකො වෙම්නෙ? 🙂\nSince: <code>{uptime}</code>", context.bot, update)
         else :
             sendMarkup(IMAGE_URL, start_string, context.bot, update, reply_markup)
     else :
-        sendMarkup(f"Oops! Only Nimesh(@akalankanime) can use me.</b>.", context.bot, update, reply_markup)
+        sendMarkup(f"අනේ ඉන්න දෙන්නකෝ ඉන්බොක්ස් ඇවිත් වද දෙන්නෙ. මම නිමේෂ් ගෙ විතරයි.</b>.", context.bot, update, reply_markup)
 
 
 def restart(update, context):
